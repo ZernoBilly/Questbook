@@ -16,7 +16,7 @@ include "header.html";
                 success: function(messages) {
                     var data = JSON.parse(messages); 
                     for(i in data){
-                        $("#messages").append("<li>" + "<strong>" + data[i].name + ":" + "</strong>" + "<br>" + data[i].message + '<input type="button" id="delete" value="Poista" data-id="'+ data[i].id +'">' +  "</li>" + "<br>");
+                        $("#messages").append('<li class="list-group-item">' + "<strong>" + data[i].name + ":" + "</strong>" + "<br>" + data[i].message + '<input type="button" id="delete" value="Poista" data-id="'+ data[i].id +'">' +  "</li>" + "<br>");
                     }
                 }
             })

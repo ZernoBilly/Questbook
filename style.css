@@ -19,3 +19,13 @@ body{
     float: right;
     margin-top: 30px;
 }
+
+.list-group{
+    display: flex;
+    align-items: center;
+}
+
+.form-group{
+    
+    align-items: center;
+}
