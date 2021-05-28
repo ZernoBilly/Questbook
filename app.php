@@ -12,11 +12,11 @@ include "header.html";
             //Read messages from database
             $.ajax({
                 type: 'GET',
-                url: 'http://192.168.1.146/questbook/read.php',
+                url: 'http://localhost/questbook/read.php',
                 success: function(messages) {
                     var data = JSON.parse(messages); 
                     for(i in data){
-                        $("#messages").append("<li>" + "<strong>" + data[i].nimi + ":" + "</strong>" + "<br>" + data[i].viesti + '<input type="button" id="delete" value="Poista" data-id="'+ data[i].id +'">' +  "</li>" + "<br>");
+                        $("#messages").append("<li>" + "<strong>" + data[i].name + ":" + "</strong>" + "<br>" + data[i].message + '<input type="button" id="delete" value="Poista" data-id="'+ data[i].id +'">' +  "</li>" + "<br>");
                     }
                 }
             })
@@ -31,7 +31,7 @@ include "header.html";
                 }
                 else{ 
                     $.ajax({
-                        url: 'http://192.168.1.146/questbook/write.php',
+                        url: 'http://localhost/questbook/write.php',
                         method: 'POST',
                         dataType: 'text',
                         data: {
@@ -48,7 +48,7 @@ include "header.html";
                     //Add id to button and read message new message from database
                     $.ajax({ 
                         type: 'GET',
-                        url: 'http://192.168.1.146/questbook/read.php',
+                        url: 'http://localhost/questbook/read.php',
                         success: function(messages) {
                             var data2 = JSON.parse(messages);
                             var length = Object.keys(data2).length - 1; 
@@ -66,7 +66,7 @@ include "header.html";
                 var $id = $(this).attr("data-id");
 
                 $.ajax({
-                    url: 'http://192.168.1.146/questbook/delete.php',
+                    url: 'http://localhost/questbook/delete.php',
                     method: 'POST',
                     dataType: 'text',
                     data: {

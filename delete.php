@@ -1,3 +1,4 @@
+
 <?php //Delete message from database
 include 'dbConn.php';
 

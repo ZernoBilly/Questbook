@@ -1,3 +1,4 @@
+
 <?php  //Read message from database
 include 'dbConn.php';
 
