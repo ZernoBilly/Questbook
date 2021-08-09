@@ -1,5 +1,5 @@
 # Questbook
-Basic message app using PHP jQuery and styling with Bootstrap
+Basic message app using PHP jQuery
 
 ## Functions
 Ajax-functions with jQuery library
